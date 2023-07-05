@@ -25,15 +25,11 @@ const Reserva = sequelize.define(
       type: DataTypes.STRING(100),
       allowNull: false,
     },
-    fecha_ingreso: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
     fecha_salida: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    habitacion: {
+    destino: {
       type: DataTypes.STRING(100),
       allowNull: false,
     },
@@ -41,7 +37,11 @@ const Reserva = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    telefono: {
+    dni: {
+      type: DataTypes.STRING(100),
+      allowNull: false,
+    },
+    nro_asiento: {
       type: DataTypes.STRING(100),
       allowNull: false,
     },
