@@ -58,12 +58,14 @@ ctrl.crearReserva = async (req, res) => {
     const {
         nombre,
         apellido,
+        fecha_solicitud,
         fecha_salida,
         destino,
         cantidad_personas,
         dni,
         nro_asiento,
-        email
+        email,
+        costo
     } = req.body; // JSON.stringify(reserva);
 
     try {
@@ -71,12 +73,14 @@ ctrl.crearReserva = async (req, res) => {
         const nuevaReserva = new Reserva({
             nombre,
             apellido,
+            fecha_solicitud,
             fecha_salida,
             destino,
             cantidad_personas,
             dni,
             nro_asiento,
-            email
+            email,
+            costo
         });
 
         // Se guarda en la BD

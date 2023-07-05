@@ -25,6 +25,10 @@ const Reserva = sequelize.define(
       type: DataTypes.STRING(100),
       allowNull: false,
     },
+    fecha_solicitud: {
+        type: DataTypes.DATE,
+        allowNull: false,
+    },
     fecha_salida: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -48,6 +52,10 @@ const Reserva = sequelize.define(
     email: {
       type: DataTypes.STRING(50),
       allowNull: false,
+    },
+    costo: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
     },
     estado: {
       type: DataTypes.BOOLEAN,

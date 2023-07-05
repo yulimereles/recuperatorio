@@ -5,22 +5,26 @@ formCrearReserva.addEventListener("submit", async (e) => {
 
   const nombre = document.querySelector("#nombre").value;
   const apellido = document.querySelector("#apellido").value;
+  const fecha_solicitud = document.querySelector("#fecha_solicitud").value;
   const fecha_salida = document.querySelector("#fecha_salida").value;
   const destino = document.querySelector("#destino").value;
   const cantidad_personas = document.querySelector("#cantidad_personas").value;
   const dni = document.querySelector("#dni").value;
   const nro_asiento = document.querySelector("#nro_asiento").value;
   const email = document.querySelector("#email").value;
+  const costo = document.querySelector("#costo").value;
 
   const reserva = {
     nombre,
     apellido,
+    fecha_solicitud,
     fecha_salida,
     destino,
     cantidad_personas,
     dni,
     nro_asiento,
     email,
+    costo,
   };
 
   const response = await fetch("http://localhost:4800/api", {

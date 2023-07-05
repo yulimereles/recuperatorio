@@ -15,14 +15,17 @@ const obtenerDatos = async () => {
                   <td>${reserva.codigo}</td>
                   <td>${reserva.nombre}</td>
                   <td>${reserva.apellido}</td>
+                  <td>${dayjs(reserva.fecha_solicitud).format(
+                    "DD-MM-YYYY HH:mm"
+                  )}</td>
                   <td>${dayjs(reserva.fecha_salida).format(
                     "DD-MM-YYYY HH:mm"
                   )}</td>
                   <td>${reserva.destino}</td>
                   <td>${reserva.cantidad_personas}</td>
                   <td>${reserva.dni}</td>
-                  <td>${reserva.nro_asiento}</td>
                   <td>${reserva.email}</td>
+                  <td>${reserva.costo}</td>
                   <td>
                  <div class="row">
                  <a href="/actualizar-reserva/${

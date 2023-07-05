@@ -18,12 +18,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Mostrar en el formulario los datos de la reserva que se quiere actualizar
   nombre.value = data.nombre;
   apellido.value = data.apellido;
+  fecha_solicitud.value = dayjs(data.fecha_solicitud).format("DD-MM-YYYY HH:mm");
   fecha_salida.value = dayjs(data.fecha_salida).format("DD-MM-YYYY HH:mm");
   destino.value = data.destino;
   cantidad_personas.value = data.cantidad_personas;
   dni.value = data.dni;
   nro_asiento.value = data.nro_asiento;
   email.value = data.email;
+  costo.value = data.costo;
+
 });
 
 formReserva.addEventListener("submit", async (e) => {
@@ -32,12 +35,14 @@ formReserva.addEventListener("submit", async (e) => {
   reservaActualizada = {
     nombre: nombre.value,
     apellido: apellido.value,
+    fecha_solicitud: fecha_solicitud.value,
     fecha_salida: fecha_salida.value,
     destino: destino.value,
     cantidad_personas: cantidad_personas.value,
     dni: dni.value,
     nro_asiento: nro_asiento.value,
     email: email.value,
+    costo: costo.value,
   };
 
   // Se envían los nuevos datos al servidor express
