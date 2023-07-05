@@ -63,9 +63,6 @@ ctrl.crearReserva = async (req, res) => {
         destino,
         cantidad_personas,
         dni,
-        nro_asiento,
-        email,
-        costo
     } = req.body; // JSON.stringify(reserva);
 
     try {
@@ -78,9 +75,6 @@ ctrl.crearReserva = async (req, res) => {
             destino,
             cantidad_personas,
             dni,
-            nro_asiento,
-            email,
-            costo
         });
 
         // Se guarda en la BD

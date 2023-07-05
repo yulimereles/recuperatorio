@@ -7,8 +7,6 @@ const fecha_salida = document.querySelector("#fecha_salida");
 const destino = document.querySelector("#destino");
 const cantidad_personas = document.querySelector("#cantidad_personas");
 const dni = document.querySelector("#dni");
-const nro_asiento = document.querySelector("#nro_asiento");
-const email = document.querySelector("#email");
 
 document.addEventListener("DOMContentLoaded", async () => {
   // Traemos la reserva que se va a editar
@@ -23,10 +21,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   destino.value = data.destino;
   cantidad_personas.value = data.cantidad_personas;
   dni.value = data.dni;
-  nro_asiento.value = data.nro_asiento;
-  email.value = data.email;
-  costo.value = data.costo;
-
 });
 
 formReserva.addEventListener("submit", async (e) => {
@@ -40,9 +34,6 @@ formReserva.addEventListener("submit", async (e) => {
     destino: destino.value,
     cantidad_personas: cantidad_personas.value,
     dni: dni.value,
-    nro_asiento: nro_asiento.value,
-    email: email.value,
-    costo: costo.value,
   };
 
   // Se envían los nuevos datos al servidor express

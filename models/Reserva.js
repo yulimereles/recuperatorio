@@ -53,10 +53,6 @@ const Reserva = sequelize.define(
       type: DataTypes.STRING(50),
       allowNull: false,
     },
-    costo: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
     estado: {
       type: DataTypes.BOOLEAN,
       defaultValue: true,
